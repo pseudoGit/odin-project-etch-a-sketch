@@ -14,3 +14,15 @@ const container = document.querySelector('#container');
 for (let i = 0; i < x.length; i++) {
     container.appendChild(x[i]);
 }
+
+const squares = document.querySelectorAll('.square');
+squares.forEach((square) => {
+    square.addEventListener('mouseover', () => {
+        if (square.style['background-color'] === "black") {
+            square.style['background-color'] = "white";
+        }
+        else {
+            square.style['background-color'] = "black";
+        }
+    });
+});
