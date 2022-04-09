@@ -1,3 +1,8 @@
+/**
+ * Creates 'size' number of divs within 'size' number of divs
+ * in the div container.
+ * @param {number} size - Dimension of grid 'size' by 'size'
+ */
 function generateGrid(size) {
     const x = new Array(size);
     for (let i = 0; i < x.length; i++) {
@@ -17,6 +22,9 @@ function generateGrid(size) {
     }
 }
 
+/**
+ * Change the color of a div when hovered over.
+ */
 function changeSquare() {
     const squares = document.querySelectorAll('.square');
     squares.forEach((square) => {
@@ -31,6 +39,9 @@ function changeSquare() {
     });
 }
 
+/**
+ * Clear the container div of all children.
+ */
 function clearGrid() {
     const container = document.querySelector('#container');
     let children = container.children;
@@ -40,8 +51,12 @@ function clearGrid() {
 }
 
 generateGrid(16);
-changeSquare();
+changeSquare(); /* Bind a listener to the new squares */
 
+/*
+ * Reset the grid by clearing the children, creating new squares,
+ * and binding a listener to all new squares. 
+ */
 const reset = document.querySelector('#reset');
 reset.addEventListener('click', () => {
     let size;
