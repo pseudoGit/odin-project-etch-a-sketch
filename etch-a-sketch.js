@@ -44,7 +44,10 @@ changeSquare();
 
 const reset = document.querySelector('#reset');
 reset.addEventListener('click', () => {
-    let size = parseInt(prompt("Enter desired grid size: "));
+    let size;
+    do {
+        size = parseInt(prompt("Enter desired grid size: "));
+    } while (size > 100);
     clearGrid();
     generateGrid(size);
     changeSquare();
