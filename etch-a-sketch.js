@@ -1,6 +1,6 @@
 /**
  * Creates 'size' number of divs within 'size' number of divs
- * in the div container.
+ * in the #container div.
  * @param {number} size - Dimension of grid 'size' by 'size'
  */
 function generateGrid(size) {
@@ -23,7 +23,7 @@ function generateGrid(size) {
 }
 
 /**
- * Change the color of a div when hovered over.
+ * Change the color of a .square div when hovered over.
  */
 function changeSquare() {
     const squares = document.querySelectorAll('.square');
@@ -40,7 +40,7 @@ function changeSquare() {
 }
 
 /**
- * Clear the container div of all children.
+ * Clear the #container div of all children.
  */
 function clearGrid() {
     const container = document.querySelector('#container');
